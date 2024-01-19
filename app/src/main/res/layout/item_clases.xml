@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivFotos"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBailes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFotos"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProfesores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivFotos"
+            app:layout_constraintTop_toBottomOf="@+id/tvBailes" />
+
+        <TextView
+            android:id="@+id/tvHorarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivFotos"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfesores" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#ED4848"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintStart_toEndOf="@+id/ivFotos"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#4CAF50"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toTopOf="@+id/readButton"
+            app:layout_constraintStart_toEndOf="@+id/ivFotos"
+            app:layout_constraintTop_toBottomOf="@+id/deleteButton" />
+
+        <ImageButton
+            android:id="@+id/readButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#03A9F4"
+            android:src="@android:drawable/ic_menu_search"
+            app:layout_constraintBottom_toTopOf="@+id/updateButton"
+            app:layout_constraintStart_toEndOf="@+id/ivFotos"
+            app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+        <ImageButton
+            android:id="@+id/updateButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#FFC107"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFotos"
+            app:layout_constraintTop_toBottomOf="@+id/readButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
